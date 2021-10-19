@@ -1,0 +1,39 @@
+# recolter une valeur porte monnaie
+wallet = int(input("Combien d'euro possédez-vous ?"))
+print("Vous possédez", wallet, "euros.")
+
+# creer un produit qui aura pour valeur 50
+produit = 50
+print("Ce produit coûte", produit, "euros.")
+
+# achat du produit
+if wallet < 50:
+    print("Vous n'avez pas assez d'argent")
+else:
+    if wallet == 50:
+        achat = input("Voulez-vous acheter ce produit ?")
+        if achat == "oui":
+            wallet = wallet - produit
+            print("Produit acheté")
+            print("Il vous reste ", wallet, " euros.")
+        else:
+            print("Achat du produit annulé !")
+
+
+# recolter l'age de la personne "Quel est votre age ?"
+age = int(input("Quel âge avez-vous ?"))
+# si la personne est mineur -> 7€
+if age < 18:
+    prix_total = 7
+# si la personne est majeur -> 12€
+else:
+    prix_total = 12
+# souhaitez-vous du pop corn
+pop_corn_request = input("Souhaitez-vous du pop-corn ?")
+
+# si oui -> +5€
+if pop_corn_request == "oui":
+        prix_total +=5
+
+# afficher ce prix total à payer
+print("Vous devez payer", prix_total, "euros.")
